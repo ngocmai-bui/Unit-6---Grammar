@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Subject–Verb Agreement & Conditionals · IELTS 4.0–5.0</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f7f3ec; --card:#fffdf8; --ink:#1f2a44; --muted:#5d6680; --line:#e4dccd;
+  --coral:#e4572e; --coral-soft:#fde5dc; --teal:#14897c; --teal-soft:#d9f1ed;
+  --sun:#ffd23f; --sun-soft:#fff4c7; --violet:#5b4bc4; --violet-soft:#e7e3fb;
+  --ok:#1f9d55; --ok-soft:#dcf5e6; --bad:#d64545; --bad-soft:#fde2e2;
+  --r:14px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Be Vietnam Pro",system-ui,sans-serif;font-size:18px;line-height:1.6}
+a{color:inherit}
+/* ---------- nav ---------- */
+nav.top{position:sticky;top:0;z-index:20;background:rgba(247,243,236,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+nav.top .in{max-width:1080px;margin:0 auto;display:flex;align-items:center;gap:6px;padding:10px 18px;flex-wrap:wrap}
+nav.top .brand{font-weight:800;margin-right:auto;font-size:16px;letter-spacing:-.01em}
+nav.top a{text-decoration:none;font-size:15px;font-weight:600;padding:6px 12px;border-radius:999px;color:var(--muted)}
+nav.top a:hover{background:#ece5d8;color:var(--ink)}
+.tmode{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:var(--muted);margin-left:8px;cursor:pointer;user-select:none}
+.tmode input{display:none}
+.tmode .sw{width:38px;height:22px;border-radius:999px;background:#d6cdbd;position:relative;transition:.2s}
+.tmode .sw::after{content:"";position:absolute;left:3px;top:3px;width:16px;height:16px;border-radius:50%;background:#fff;transition:.2s}
+.tmode input:checked + .sw{background:var(--violet)}
+.tmode input:checked + .sw::after{left:19px}
+/* ---------- layout ---------- */
+main{max-width:1080px;margin:0 auto;padding:0 18px 80px}
+header.hero{padding:48px 0 26px}
+.kicker{font-size:14px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--coral)}
+h1{font-size:clamp(34px,5vw,54px);line-height:1.08;margin:.2em 0 .3em;letter-spacing:-.02em;font-weight:800}
+h1 .hl{background:linear-gradient(transparent 60%,var(--sun) 60%)}
+.lead{font-size:19px;color:var(--muted);max-width:760px}
+section.part{margin-top:56px}
+.part-h{display:flex;align-items:baseline;gap:14px;border-bottom:3px solid var(--ink);padding-bottom:10px;margin-bottom:22px}
+.part-h .num{font-size:15px;font-weight:800;background:var(--ink);color:var(--paper);padding:4px 11px;border-radius:8px;transform:translateY(-4px)}
+.part-h h2{margin:0;font-size:clamp(26px,3.4vw,36px);letter-spacing:-.015em;line-height:1.15}
+h3{font-size:23px;margin:34px 0 10px;letter-spacing:-.01em}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:20px 22px;margin:14px 0;box-shadow:0 1px 0 rgba(0,0,0,.03)}
+.muted{color:var(--muted)}
+.small{font-size:15px}
+.ref{display:inline-block;font-size:13px;font-weight:700;color:var(--violet);background:var(--violet-soft);padding:2px 9px;border-radius:999px;margin-left:6px;vertical-align:middle;white-space:nowrap}
+.tag{display:inline-block;font-size:13px;font-weight:700;padding:2px 10px;border-radius:999px;vertical-align:middle}
+.tag.core{background:var(--teal-soft);color:var(--teal)}
+.tag.ielts{background:var(--coral-soft);color:var(--coral)}
+code,.f{font-family:inherit;font-weight:700;background:var(--sun-soft);padding:1px 7px;border-radius:6px}
+.x{color:var(--bad);text-decoration:line-through;text-decoration-thickness:2px}
+.v{color:var(--ok);font-weight:700}
+.subj{background:var(--teal-soft);color:var(--teal);font-weight:700;padding:0 5px;border-radius:5px}
+.verb{background:var(--coral-soft);color:var(--coral);font-weight:700;padding:0 5px;border-radius:5px}
+.ign{color:#9aa1b5;font-style:italic}
+details.plan summary{cursor:pointer;font-weight:700;font-size:18px}
+details.plan table{width:100%;border-collapse:collapse;margin-top:12px;font-size:16px}
+details.plan td,details.plan th{border-bottom:1px solid var(--line);padding:8px 6px;text-align:left;vertical-align:top}
+details.plan th{font-size:14px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+/* ---------- rules grid ---------- */
+.rules{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:14px}
+.rule{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px 20px;position:relative}
+.rule .rn{position:absolute;top:-12px;left:16px;background:var(--ink);color:var(--paper);font-weight:800;font-size:14px;padding:2px 10px;border-radius:8px}
+.rule h4{margin:6px 0 6px;font-size:19px;line-height:1.3}
+.rule p{margin:6px 0;font-size:16.5px}
+.rule .ex{font-size:16.5px;margin:4px 0;padding-left:14px;border-left:3px solid var(--line)}
+.formula{font-size:20px;font-weight:700;text-align:center;padding:16px;background:var(--card);border:2px dashed var(--ink);border-radius:var(--r);margin:16px 0}
+/* ---------- exercises ---------- */
+.exo{background:var(--card);border:1px solid var(--line);border-radius:var(--r);margin:22px 0;overflow:hidden}
+.exo-h{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:14px 20px;background:#f1ebdf;border-bottom:1px solid var(--line)}
+.exo-h .exn{font-weight:800;font-size:15px;background:var(--coral);color:#fff;padding:3px 11px;border-radius:8px}
+.exo-h h4{margin:0;font-size:19px;flex:1;min-width:200px}
+.score{font-weight:800;font-size:15px;color:var(--teal);background:var(--teal-soft);padding:3px 11px;border-radius:999px}
+.exo-b{padding:8px 20px 18px}
+.instr{font-size:16px;color:var(--muted);margin:10px 0 6px}
+.it{padding:12px 0;border-bottom:1px dashed var(--line);display:flex;gap:12px;align-items:flex-start}
+.it:last-child{border-bottom:none}
+.it .n{font-weight:800;color:var(--muted);min-width:26px;font-size:16px;padding-top:3px}
+.it .body{flex:1}
+.q{font-size:18px}
+.opts{display:inline-flex;gap:6px;flex-wrap:wrap;margin:4px 0}
+button{font-family:inherit;cursor:pointer}
+.opt{font-size:16.5px;font-weight:600;padding:5px 14px;border-radius:999px;border:2px solid var(--line);background:#fff;color:var(--ink);transition:.12s}
+.opt:hover{border-color:var(--ink)}
+.opt.right{background:var(--ok);border-color:var(--ok);color:#fff}
+.opt.wrong{background:var(--bad-soft);border-color:var(--bad);color:var(--bad);text-decoration:line-through}
+.opt:disabled{cursor:default}
+.blank{display:inline-block;min-width:70px;border-bottom:2px solid var(--ink);text-align:center;font-weight:700;color:var(--coral);padding:0 6px}
+.why{display:none;font-size:15.5px;margin-top:6px;padding:8px 12px;border-radius:10px;background:var(--sun-soft)}
+.why.show{display:block}
+.why.ok{background:var(--ok-soft)}
+.why.no{background:var(--bad-soft)}
+input.gap{font-family:inherit;font-size:17px;font-weight:600;border:none;border-bottom:2px solid var(--ink);background:#fffaf0;padding:2px 8px;width:170px;color:var(--ink);border-radius:4px 4px 0 0}
+input.gap:focus{outline:none;background:var(--sun-soft)}
+input.gap.okk{border-color:var(--ok);background:var(--ok-soft)}
+input.gap.bad{border-color:var(--bad);background:var(--bad-soft)}
+select.sel{font-family:inherit;font-size:16.5px;font-weight:600;border:2px solid var(--ink);border-radius:8px;padding:2px 6px;background:#fffaf0;color:var(--ink)}
+select.sel.okk{border-color:var(--ok);background:var(--ok-soft)}
+select.sel.bad{border-color:var(--bad);background:var(--bad-soft)}
+.fix{color:var(--ok);font-weight:700}
+textarea.open{width:100%;font-family:inherit;font-size:17px;border:2px solid var(--line);border-radius:10px;padding:8px 12px;margin-top:6px;resize:vertical;min-height:46px;background:#fffaf0}
+textarea.open:focus{outline:none;border-color:var(--ink)}
+.model{display:none;margin-top:6px;padding:8px 12px;border-radius:10px;background:var(--ok-soft);font-weight:600}
+.model.show{display:block}
+.actions{display:flex;gap:8px;flex-wrap:wrap;padding:12px 20px 18px}
+.btn{font-size:15.5px;font-weight:700;border:2px solid var(--ink);background:var(--ink);color:var(--paper);padding:7px 16px;border-radius:10px}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn:hover{transform:translateY(-1px)}
+.correct-ans-hint{display:none;font-size:14px;font-weight:700;color:var(--violet);margin-left:8px}
+body.teacher .correct-ans-hint{display:inline}
+body.teacher .opt[data-c="1"]{box-shadow:0 0 0 3px var(--violet-soft);border-color:var(--violet)}
+body.teacher .model{display:block}
+.tonly{display:none}
+body.teacher .tonly{display:block}
+.word{display:inline-block;padding:1px 2px;margin:1px 0;border-radius:6px;cursor:pointer;border:2px solid transparent}
+.word:hover{border-color:var(--line);background:#fff}
+.word.picked{background:var(--teal);color:#fff}
+.word.nope{background:var(--bad-soft);animation:shake .3s}
+@keyframes shake{25%{transform:translateX(-3px)}75%{transform:translateX(3px)}}
+/* ---------- conditionals table ---------- */
+.ctable{display:grid;gap:12px}
+.crow{display:grid;grid-template-columns:150px 1fr;background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.crow .lab{padding:16px;color:#fff;font-weight:800;display:flex;flex-direction:column;justify-content:center;gap:6px}
+.crow .lab .nm{font-size:21px;line-height:1.1}
+.crow .lab .when{font-size:13px;font-weight:600;opacity:.92;line-height:1.35}
+.meter{height:7px;background:rgba(255,255,255,.35);border-radius:9px;overflow:hidden}
+.meter i{display:block;height:100%;background:#fff}
+.crow .cnt{padding:14px 18px}
+.crow .form{font-weight:700;font-size:17.5px}
+.crow .form .ifp{background:var(--sun-soft);padding:1px 7px;border-radius:6px}
+.crow .eg{margin:6px 0 2px;font-size:17.5px}
+.crow .mean{font-size:15.5px;color:var(--muted)}
+.c0 .lab{background:#3d7dd8}.c1 .lab{background:var(--teal)}.c2 .lab{background:var(--violet)}.c3 .lab{background:var(--coral)}.cm .lab{background:#7a6f5c}
+.notes{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
+.note{background:var(--card);border:1px solid var(--line);border-left:6px solid var(--coral);border-radius:10px;padding:14px 16px;font-size:16.5px}
+.note b.t{display:block;font-size:17.5px;margin-bottom:4px}
+/* ---------- speaking ---------- */
+.stage{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.panel{background:var(--ink);color:var(--paper);border-radius:var(--r);padding:20px 22px;min-height:190px;display:flex;flex-direction:column}
+.panel h4{margin:0 0 8px;font-size:15px;text-transform:uppercase;letter-spacing:.1em;color:var(--sun)}
+.big{font-size:clamp(24px,3vw,32px);font-weight:800;line-height:1.25;flex:1;display:flex;align-items:center}
+.panel .row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.panel .btn{background:var(--sun);color:var(--ink);border-color:var(--sun)}
+.panel .btn.ghost{background:transparent;color:var(--paper);border-color:#59647f}
+.panel input{font-family:inherit;font-size:15px;padding:7px 10px;border-radius:8px;border:none;flex:1;min-width:180px}
+.qtype{display:inline-block;font-size:13px;font-weight:700;padding:2px 9px;border-radius:999px;background:#fff;color:var(--ink);margin-bottom:8px}
+.starter{font-size:15px;color:#c6cbe0;margin-top:6px}
+.timer{font-variant-numeric:tabular-nums;font-size:22px;font-weight:800;color:var(--sun)}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
+.chip{font-size:13px;padding:2px 9px;border-radius:999px;background:#33405f;color:#c6cbe0}
+.chip.done{text-decoration:line-through;opacity:.55}
+/* ---------- key ---------- */
+.keygrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
+.key{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 18px;font-size:16px}
+.key h5{margin:0 0 6px;font-size:17px}
+.key ol{margin:0;padding-left:22px}
+.key li{margin:2px 0}
+.wc{font-weight:800;font-size:15px;color:var(--teal)}
+.checklist{list-style:none;padding:0;margin:10px 0}
+.checklist li{margin:4px 0;font-size:16.5px}
+.checklist input{width:18px;height:18px;vertical-align:-3px;margin-right:8px;accent-color:var(--teal)}
+.prompt{font-size:20px;font-weight:700;padding:14px 18px;background:var(--sun-soft);border-radius:10px;margin:8px 0}
+footer{max-width:1080px;margin:0 auto;padding:30px 18px 60px;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+@media (max-width:700px){
+  body{font-size:17px}
+  .crow{grid-template-columns:1fr}
+  .stage{grid-template-columns:1fr}
+  nav.top a{padding:4px 7px;font-size:13.5px}
+  nav.top .brand{display:none}
+  html{scroll-padding-top:110px}
+}
+</style>
+</head>
+<body>
+<nav class="top"><div class="in">
+  <span class="brand">Grammar Lab ✦</span>
+  <a href="#warmup">Warm-up</a>
+  <a href="#sva">S–V Agreement</a>
+  <a href="#cond">Conditionals</a>
+  <a href="#speak">Speaking</a>
+  <a href="#homework">Homework</a>
+  <a href="#key">Đáp án</a>
+  <label class="tmode" title="Hiện đáp án trên màn hình (dành cho giáo viên)"><input type="checkbox" id="tmode"><span class="sw"></span>Teacher</label>
+</div></nav>
+
+<main>
+<header class="hero">
+  <div class="kicker">IELTS 4.0 – 5.0 · Grammar for Writing & Speaking</div>
+  <h1>Subject–Verb <span class="hl">Agreement</span><br>&amp; Conditionals</h1>
+</header>
+
+<!-- ========================= WARM-UP ========================= -->
+<section class="part" id="warmup">
+  <div class="part-h"><span class="num">0</span><h2>Warm-up: Bắt lỗi trong bài Writing</h2></div>
+  <div id="ex-warm"></div>
+</section>
+
+<!-- ========================= PART 1: SVA ========================= -->
+<section class="part" id="sva">
+  <div class="part-h"><span class="num">1</span><h2>Subject–Verb Agreement · Sự hoà hợp chủ ngữ – động từ</h2></div>
+
+  <div class="formula">Chủ ngữ <span class="subj">số ít</span> → động từ <span class="verb">số ít</span> (is / was / has / V-s) &nbsp;·&nbsp; Chủ ngữ <span class="subj">số nhiều</span> → động từ <span class="verb">số nhiều</span> (are / were / have / V)</div>
+  <p>Nghe thì dễ, nhưng lỗi thường xảy ra vì <b>không tìm đúng chủ ngữ thật</b> hoặc <b>không biết danh từ đó số ít hay số nhiều</b>. Dưới đây là 12 quy tắc, chia làm 2 nhóm.</p>
+
+  <h3><span class="tag core">MUST-KNOW</span> Quy tắc 1–8</h3>
+  <div class="rules">
+    <div class="rule"><span class="rn">1</span>
+      <h4>Tìm “chủ ngữ thật” – bỏ qua phần ở giữa</h4>
+      <p>Bỏ qua <i>of + N, in/on/with + N, who/which…</i> đứng giữa chủ ngữ và động từ.</p>
+      <div class="ex"><span class="subj">The price</span> <span class="ign">of houses</span> <span class="verb">has</span> risen.</div>
+      <div class="ex"><span class="subj">Students</span> <span class="ign">who live in the city</span> <span class="verb">have</span> more chances.</div>
+      <div class="ex"><span class="subj">The quality</span> <span class="ign">of the roads</span> <span class="verb">is</span> poor.</div>
+    </div>
+    <div class="rule"><span class="rn">2</span>
+      <h4>One of + N số nhiều → V số ít</h4>
+      <p>Chủ ngữ thật là <b>one</b> (một cái).</p>
+      <div class="ex"><span class="subj">One</span> <span class="ign">of my friends</span> <span class="verb">lives</span> in Hanoi.</div>
+      <div class="ex"><span class="subj">One</span> <span class="ign">of the main reasons</span> <span class="verb">is</span> cost. <span class="x">are</span></div>
+    </div>
+    <div class="rule"><span class="rn">3</span>
+      <h4>Every / Each / Everyone / Nobody… → V số ít <span class="ref">EGIU 90, 91</span></h4>
+      <div class="ex"><span class="subj">Every student</span> <span class="verb">has</span> a laptop.</div>
+      <div class="ex"><span class="subj">Everybody</span> <span class="verb">has</span> arrived. <span class="x">have</span></div>
+      <div class="ex"><span class="subj">Each</span> <span class="ign">of the rooms</span> <span class="verb">is</span> different.</div>
+      <p class="small muted">Nhưng đại từ phía sau vẫn dùng <i>they/their</i>: Everyone did <b>their</b> best.</p>
+    </div>
+    <div class="rule"><span class="rn">4</span>
+      <h4>Danh từ không đếm được → V số ít <span class="ref">EGIU 70, 79</span></h4>
+      <p><i>information, advice, news, money, traffic, pollution, homework, equipment, knowledge, furniture</i> + môn học đuôi <i>-ics</i>: <i>maths, physics, economics, politics</i>.</p>
+      <div class="ex">The <span class="subj">news</span> <span class="verb">is</span> good. <span class="x">are</span></div>
+      <div class="ex"><span class="subj">Traffic</span> in Hanoi <span class="verb">is</span> terrible.</div>
+      <div class="ex"><span class="subj">Maths</span> <span class="verb">is</span> my favourite subject.</div>
+    </div>
+    <div class="rule"><span class="rn">5</span>
+      <h4>Luôn số nhiều: people, police, đồ vật “2 phần” <span class="ref">EGIU 79</span></h4>
+      <p><i>people, police, trousers, jeans, shorts, glasses, scissors, pyjamas</i></p>
+      <div class="ex">Many <span class="subj">people</span> <span class="verb">don’t</span> have enough food. <span class="x">doesn’t</span></div>
+      <div class="ex">The <span class="subj">police</span> <span class="verb">are</span> investigating.</div>
+      <div class="ex">My <span class="subj">glasses</span> <span class="verb">are</span> broken. — nhưng: <span class="subj">A pair</span> of jeans <span class="verb">costs</span> $30.</div>
+    </div>
+    <div class="rule"><span class="rn">6</span>
+      <h4>Tiền / thời gian / khoảng cách = “1 khối” → V số ít <span class="ref">EGIU 79</span></h4>
+      <div class="ex"><span class="subj">Three years</span> <span class="verb">is</span> a long time.</div>
+      <div class="ex"><span class="subj">Ten dollars</span> <span class="verb">isn’t</span> enough.</div>
+      <div class="ex"><span class="subj">Two kilometres</span> <span class="verb">is</span> not far.</div>
+    </div>
+    <div class="rule"><span class="rn">7</span>
+      <h4>There is / There are → nhìn danh từ <u>phía sau</u> <span class="ref">EGIU 84</span></h4>
+      <div class="ex">There <span class="verb">is</span> <span class="subj">a lot of traffic</span>.</div>
+      <div class="ex">There <span class="verb">are</span> <span class="subj">many reasons</span> for this. <span class="x">is</span></div>
+    </div>
+    <div class="rule"><span class="rn">8</span>
+      <h4>V-ing / To V làm chủ ngữ → V số ít</h4>
+      <div class="ex"><span class="subj">Playing video games</span> <span class="verb">is</span> fun.</div>
+      <div class="ex"><span class="subj">Learning languages</span> <span class="verb">opens</span> many doors.</div>
+      <p class="small muted">Đừng bị “languages” đánh lừa — chủ ngữ thật là <b>việc học</b>.</p>
+    </div>
+  </div>
+
+  <div id="ex-sva1"></div>
+  <div id="ex-sva2"></div>
+
+  <h3><span class="tag ielts">IELTS BONUS</span> Quy tắc 9–12</h3>
+  <div class="rules">
+    <div class="rule"><span class="rn">9</span>
+      <h4>The number of vs A number of</h4>
+      <div class="ex"><span class="subj">The number</span> <span class="ign">of tourists</span> <span class="verb">has</span> increased. → <b>số lượng</b> (1 con số) → số ít</div>
+      <div class="ex"><span class="subj">A number of tourists</span> <span class="verb">have</span> complained. → <b>nhiều</b> khách (= many) → số nhiều</div>
+      <p class="small muted">Rất hay gặp trong Task 1!</p>
+    </div>
+    <div class="rule"><span class="rn">10</span>
+      <h4>% / half / most / some / all of + N → V theo N</h4>
+      <div class="ex">40% of <span class="subj">the students</span> <span class="verb">were</span> satisfied.</div>
+      <div class="ex">40% of <span class="subj">the money</span> <span class="verb">was</span> spent on food.</div>
+      <div class="ex">Most <span class="subj">people</span> <span class="verb">think</span>… / Most of <span class="subj">the water</span> <span class="verb">is</span>…</div>
+    </div>
+    <div class="rule"><span class="rn">11</span>
+      <h4>Both / Neither / Either <span class="ref">EGIU 89</span></h4>
+      <div class="ex"><span class="subj">Both Lan and Minh</span> <span class="verb">are</span> late. (số nhiều)</div>
+      <div class="ex"><span class="subj">Neither</span> <span class="ign">of them</span> <span class="verb">is</span> at home. (văn viết dùng số ít; văn nói có thể dùng <i>are</i>)</div>
+      <div class="ex">Neither Lan nor <span class="subj">her friends</span> <span class="verb">were</span> there. → V theo chủ ngữ <b>gần nhất</b></div>
+    </div>
+    <div class="rule"><span class="rn">12</span>
+      <h4>Danh từ tập hợp: family, team, government, staff… <span class="ref">EGIU 79</span></h4>
+      <p>Trong tiếng Anh-Anh dùng <b>số ít hoặc số nhiều</b> đều được.</p>
+      <div class="ex">The government <span class="verb">has</span> decided… / The government <span class="verb">have</span> decided…</div>
+      <p class="small muted">Mẹo cho bài thi: chọn <b>một</b> cách rồi dùng <b>nhất quán</b> cả bài.</p>
+    </div>
+  </div>
+
+  <div id="ex-sva3"></div>
+  <div id="ex-sva4"></div>
+</section>
+
+<!-- ========================= PART 2: CONDITIONALS ========================= -->
+<section class="part" id="cond">
+  <div class="part-h"><span class="num">2</span><h2>Conditionals · Câu điều kiện</h2></div>
+  <p>Mỗi câu điều kiện có 2 phần: <b>tình huống (if-clause)</b> + <b>kết quả (main clause)</b>. Loại câu phụ thuộc vào việc tình huống đó <b>có thật / có thể xảy ra</b> đến mức nào. Thanh trắng = mức độ “có thật”.</p>
+
+  <div class="ctable">
+    <div class="crow c0"><div class="lab"><span class="nm">Zero</span><span class="when">Sự thật, quy luật – luôn đúng</span><span class="meter"><i style="width:100%"></i></span></div>
+      <div class="cnt"><div class="form"><span class="ifp">If + present simple</span>, present simple</div>
+      <div class="eg">If you <b>heat</b> ice, it <b>melts</b>.</div>
+      <div class="mean">= lúc nào cũng vậy. Có thể thay <i>if</i> bằng <i>when</i>.</div></div></div>
+    <div class="crow c1"><div class="lab"><span class="nm">First</span><span class="when">Có thể xảy ra ở hiện tại / tương lai</span><span class="meter"><i style="width:70%"></i></span></div>
+      <div class="cnt"><div class="form"><span class="ifp">If + present simple</span>, will / can / might + V &nbsp;(hoặc câu mệnh lệnh)</div>
+      <div class="eg">If it <b>rains</b> tomorrow, we<b>’ll stay</b> at home. · If you feel tired, <b>take</b> a break!</div>
+      <div class="mean">= tình huống thật, có khả năng xảy ra.</div></div></div>
+    <div class="crow c2"><div class="lab"><span class="nm">Second</span><span class="when">Tưởng tượng / khó xảy ra ở hiện tại / tương lai</span><span class="meter"><i style="width:25%"></i></span></div>
+      <div class="cnt"><div class="form"><span class="ifp">If + past simple (were)</span>, would / could / might + V</div>
+      <div class="eg">If I <b>had</b> more time, I <b>would learn</b> Chinese.</div>
+      <div class="mean">= Thực tế: tôi <b>không có</b> thời gian. ⚠️ Động từ quá khứ nhưng nghĩa là <b>hiện tại</b>. <span class="ref">EGIU 38, 39</span></div></div></div>
+    <div class="crow c3"><div class="lab"><span class="nm">Third</span><span class="when">Quá khứ – đã xảy ra rồi, không đổi được</span><span class="meter"><i style="width:0%"></i></span></div>
+      <div class="cnt"><div class="form"><span class="ifp">If + had + V3</span>, would / could / might + have + V3</div>
+      <div class="eg">If I <b>had studied</b> harder, I <b>would have passed</b>.</div>
+      <div class="mean">= Thực tế: tôi <b>đã không</b> học chăm → tôi <b>đã trượt</b>. Thường dùng để nói về sự <b>tiếc nuối</b>. <span class="ref">EGIU 40</span></div></div></div>
+    <div class="crow cm"><div class="lab"><span class="nm">Bonus: Mixed</span><span class="when">Quá khứ → kết quả ở hiện tại</span></div>
+      <div class="cnt"><div class="form"><span class="ifp">If + had + V3</span>, would + V (now)</div>
+      <div class="eg">If I <b>had gone</b> to bed earlier last night, I <b>wouldn’t be</b> tired now.</div>
+      <div class="mean">Dành cho bạn nào muốn thử thách thêm. <span class="ref">EGIU 40</span></div></div></div>
+  </div>
+
+  <h3>6 lưu ý “ăn điểm”</h3>
+  <div class="notes">
+    <div class="note"><b class="t">1. Không dùng will / would trong mệnh đề if</b>
+      <span class="x">If it will rain</span> → <span class="v">If it rains</span>, we’ll stay home.<br>
+      <span class="x">If I would have</span> → <span class="v">If I had</span> money, I would buy it.<br>
+      <span class="x">If I would have known</span> → <span class="v">If I had known</span>… <span class="ref">EGIU 25, 38–40</span></div>
+    <div class="note"><b class="t">2. Dấu phẩy</b>
+      If đứng <b>đầu câu</b> → có dấu phẩy: <i>If you join a gym<b>,</b> I’ll join too.</i><br>
+      If đứng <b>giữa câu</b> → không phẩy: <i>I’ll join too if you join a gym.</i></div>
+    <div class="note"><b class="t">3. If hay When?</b>
+      <b>When</b> = chắc chắn sẽ xảy ra; <b>If</b> = có thể xảy ra.<br>
+      <i>When I get home, I’ll call you.</i> (chắc chắn về nhà)<br>
+      <i>If I go out, I’ll buy some bread.</i> (chưa chắc đi) <span class="ref">EGIU 25</span></div>
+    <div class="note"><b class="t">4. Lời khuyên: If I were you…</b>
+      <i>If I <b>were</b> you, I would practise speaking every day.</i><br>
+      <i>were</i> dùng cho mọi ngôi (<i>was</i> cũng được nhưng thân mật hơn) — trong bài thi nên dùng <b>were</b>.</div>
+    <div class="note"><b class="t">5. Unless = If … not</b>
+      <i><b>Unless</b> you hurry, you’ll miss the bus.</i><br>= <i>If you <b>don’t</b> hurry, you’ll miss the bus.</i><br>⚠️ Sau unless <b>không</b> thêm not nữa. <span class="ref">EGIU 115</span></div>
+    <div class="note"><b class="t">6. Could / might thay cho would</b>
+      <i>If I won the lottery, I <b>might</b> buy a house.</i> (có thể sẽ)<br>
+      <i>If it stopped raining, we <b>could</b> go out.</i> (sẽ có thể)<br>
+      <i>If you’d told me, I <b>could have</b> helped.</i></div>
+  </div>
+
+  <div id="ex-c5"></div>
+  <div id="ex-c6"></div>
+  <div id="ex-c7"></div>
+  <div id="ex-c8"></div>
+  <div id="ex-c9"></div>
+  <div id="ex-c10"></div>
+</section>
+
+<!-- ========================= PART 3: SPEAKING ========================= -->
+<section class="part" id="speak">
+  <div class="part-h"><span class="num">3</span><h2>Speaking time: “What would you do if…?”</h2></div>
+  <p>Giáo viên nhập tên học sinh → bấm <b>Chọn bạn</b> (không lặp lại đến khi hết lượt) → bấm <b>Câu hỏi mới</b>. Mỗi bạn có <b>30 giây</b> suy nghĩ, có câu mở đầu gợi ý ở dưới.</p>
+  <div class="stage">
+    <div class="panel">
+      <h4>Who’s next?</h4>
+      <div class="big" id="pickName">—</div>
+      <div class="chips" id="nameChips"></div>
+      <div class="row">
+        <input id="names" placeholder="Nhập tên, cách nhau bằng dấu phẩy" aria-label="Tên học sinh">
+        <button class="btn" id="pickBtn">Chọn bạn</button>
+        <button class="btn ghost" id="resetNames">Làm lại</button>
+      </div>
+    </div>
+    <div class="panel">
+      <h4>Question <span class="timer" id="timer" style="float:right">0:30</span></h4>
+      <div><span class="qtype" id="qType">—</span></div>
+      <div class="big" id="qText" style="font-size:clamp(20px,2.4vw,26px)">Bấm “Câu hỏi mới”</div>
+      <div class="starter" id="qStarter"></div>
+      <div class="row">
+        <span class="small" style="align-self:center;color:#c6cbe0">Câu hỏi mới:</span>
+        <button class="btn" data-q="1">1st</button>
+        <button class="btn" data-q="2">2nd</button>
+        <button class="btn" data-q="3">3rd</button>
+        <button class="btn" data-q="p3">IELTS Part 3</button>
+        <button class="btn ghost" id="timerBtn">⏱ 30s</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3 style="margin-top:4px">🔗 If-chain (cả lớp)</h3>
+    <p>Mỗi bạn lấy <b>kết quả</b> của bạn trước làm <b>điều kiện</b> của câu mình (first conditional):</p>
+    <p class="q">If I get up early tomorrow, <b>I’ll have time for breakfast</b>. → If <b>I have time for breakfast</b>, I’ll… → If …</p>
+    <p class="small muted">Phiên bản khó hơn (second conditional): <i>If I were a millionaire, I’d buy an island. → If I bought an island, I’d…</i></p>
+  </div>
+
+  <div class="card">
+    <h3 style="margin-top:4px">🎟 Exit ticket (gõ vào chat)</h3>
+    <ol>
+      <li>Một câu đúng quy tắc SVA về thành phố của bạn, có dùng <i>One of… / Every… / The number of…</i></li>
+      <li>Một câu first conditional về cuối tuần này.</li>
+      <li>Một câu third conditional về một điều bạn tiếc trong năm nay.</li>
+    </ol>
+  </div>
+</section>
+
+
+<!-- ========================= HOMEWORK ========================= -->
+<section class="part" id="homework">
+  <div class="part-h"><span class="num">HW</span><h2>Homework · Bài về nhà</h2></div>
+  <div class="card hwname">
+    <label for="stName"><b>Tên của bạn:</b></label>
+    <input id="stName" class="gap" style="width:240px" placeholder="Nguyễn Văn A" autocomplete="off">
+    <p class="small muted" style="margin:8px 0 0">Làm hết 5 bài → bấm <b>Kiểm tra</b> ở từng bài (được sửa nhiều lần) → cuối trang bấm <b>📋 Copy bài làm</b> rồi dán gửi cô.</p>
+  </div>
+  <div id="hw1"></div>
+  <div id="hw2"></div>
+  <div id="hw3"></div>
+  <div id="hw4"></div>
+  <div id="hw5"></div>
+
+  <div class="card submit">
+    <h3 style="margin-top:4px">📤 Nộp bài</h3>
+    <p>Bấm nút dưới đây để copy toàn bộ bài làm (kèm điểm các bài tự chấm), rồi dán vào tin nhắn gửi cô.</p>
+    <button class="btn" id="copyHW">📋 Copy bài làm</button>
+    <span id="copyMsg" class="small" style="margin-left:10px;font-weight:700"></span>
+    <textarea id="hwOut" class="open" rows="8" style="display:none;margin-top:12px" readonly></textarea>
+  </div>
+
+  <div class="card">
+    <h3 style="margin-top:4px">📚 Luyện thêm (không bắt buộc) – English Grammar in Use</h3>
+    <ul>
+      <li><b>Hoà hợp chủ ngữ – động từ:</b> Unit 79 (79.3, 79.4, 79.5) · Unit 89 (neither/either) · Unit 90 · Unit 91 (91.2)</li>
+      <li><b>Câu điều kiện:</b> Unit 25 (25.1) · Unit 38 (38.2, 38.3) · Unit 39 (39.1, 39.2) · Unit 40 (40.1, 40.2) · Unit 115 (unless)</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ========================= PART 4: KEY ========================= -->
+<section class="part" id="key">
+  <div class="part-h"><span class="num">4</span><h2>Đáp án worksheet (Unit 28 & 29)</h2></div>
+  <p class="muted small">Đáp án cho các trang worksheet dùng trên lớp. Các bài tương tác ở trên tự chấm (hoặc bật Teacher để hiện đáp án).</p>
+  <div class="keygrid">
+    <div class="key"><h5>Unit 28 · A (zero conditional)</h5><ol>
+      <li>If you heat water, it boils.</li>
+      <li>If you send an e-mail, it is free.</li>
+      <li>It is dangerous if you don’t wear a seatbelt.</li>
+      <li>If you have an injection, it doesn’t usually hurt.</li>
+      <li>If you don’t water plants and flowers, they die.</li>
+      <li>If the sea isn’t calm, it isn’t safe to swim.</li></ol></div>
+    <div class="key"><h5>Unit 28 · B (sửa lỗi)</h5><ol>
+      <li>go</li><li>I’ll cook</li><li>is</li><li>don’t</li><li>’ll be / will be</li>
+      <li>will you ask / can you ask</li><li>Will (Frank come)</li><li>tell</li></ol></div>
+    <div class="key"><h5>Unit 28 · C</h5><ol>
+      <li>do</li><li>’ll scream / will scream</li><li>is</li><li>won’t mind</li>
+      <li>doesn’t call</li><li>cost</li><li>will Greg be</li><li>don’t get</li></ol></div>
+    <div class="key"><h5>Unit 29 · A</h5><ol>
+      <li>No</li><li>No</li><li>No</li><li>No</li><li>Yes</li><li>No</li>
+      <li>Yes</li><li>No</li><li>Yes</li><li>Yes</li><li>No</li><li>Yes</li></ol></div>
+    <div class="key"><h5>Unit 29 · B</h5><ol>
+      <li>had told / ’d told</li><li>would have been</li><li>had known / ’d known</li>
+      <li>wouldn’t have got</li><li>hadn’t broken down</li><li>hadn’t helped</li>
+      <li>hadn’t shown … would you have done</li></ol></div>
+    <div class="key"><h5>Unit 29 · C</h5><ol>
+      <li>(If it) had been (cold)</li><li>(If John) had come</li><li>(Claire) would have bought</li>
+      <li>(If the joke) hadn’t been</li><li>(We) wouldn’t have decided</li></ol></div>
+  </div>
+</section>
+</main>
+<footer>Grammar Lab · Subject–Verb Agreement & Conditionals · Tham khảo kiến thức: R. Murphy, <i>English Grammar in Use</i> (5th ed.), Units 25, 38–40, 79, 84, 89–91, 115. Bài tập trên trang được biên soạn mới cho lớp.</footer>
+
+<script>
+/* ===================== helpers ===================== */
+const $ = (s, r=document) => r.querySelector(s);
+const el = (tag, cls, html) => { const e=document.createElement(tag); if(cls) e.className=cls; if(html!==undefined) e.innerHTML=html; return e; };
+const fill = s => s.replace(/___/g,'<span class="blank">&nbsp;</span>');
+function norm(s){
+  return s.toLowerCase().replace(/[’‘`´]/g,"'").replace(/[.!?,;:"]/g,' ')
+    .replace(/\bwon't\b/g,'will not').replace(/\bcan't\b/g,'can not').replace(/\bcannot\b/g,'can not')
+    .replace(/n't\b/g,' not').replace(/'ll\b/g,' will').replace(/'re\b/g,' are').replace(/'ve\b/g,' have')
+    .replace(/\s+/g,' ').trim();
+}
+function matches(input, answers){
+  const a = norm(input);
+  if(!a) return false;
+  const cands = [a, a.replace(/'d\b/g,' had').replace(/\s+/g,' ').trim(), a.replace(/'d\b/g,' would').replace(/\s+/g,' ').trim()];
+  const ok = answers.map(norm);
+  return cands.some(c => ok.includes(c));
+}
+function shell(id, num, title, instr, ref){
+  const host = document.getElementById(id);
+  const box = el('div','exo');
+  box.innerHTML = `<div class="exo-h"><span class="exn">${num}</span><h4>${title}${ref?` <span class="ref">${ref}</span>`:''}</h4><span class="score">0 / 0</span></div>
+    <div class="exo-b"><p class="instr">${instr}</p></div><div class="actions"></div>`;
+  host.appendChild(box);
+  return {box, body:$('.exo-b',box), actions:$('.actions',box), score:$('.score',box)};
+}
+function setScore(s, got, total){ s.textContent = `${got} / ${total}`; }
+function addBtn(actions, label, fn, ghost){ const b=el('button','btn'+(ghost?' ghost':''),label); b.onclick=fn; actions.appendChild(b); return b; }
+
+const HW=[];
+const plain = h => { const d=document.createElement('div'); d.innerHTML=h; return d.textContent.trim(); };
+/* ---------- type A: choice (buttons, instant feedback) ---------- */
+function choiceEx(id, num, title, instr, ref, items){
+  const S = shell(id,num,title,instr,ref); let got=0, done=0;
+  setScore(S.score,0,items.length);
+  items.forEach((it,i)=>{
+    const row = el('div','it'); row.innerHTML = `<span class="n">${i+1}</span>`;
+    const body = el('div','body');
+    if(it.sit) body.appendChild(el('div','muted small',it.sit));
+    if(it.q) body.appendChild(el('div','q',fill(it.q)));
+    const opts = el('div','opts'); if(it.stack){opts.style.display='flex';opts.style.flexDirection='column';opts.style.alignItems='flex-start'}
+    const why = el('div','why',it.why||'');
+    it.opts.forEach((o,k)=>{
+      const b = el('button','opt',o); b.dataset.c = (k===it.a)?'1':'0';
+      b.onclick=()=>{
+        if(row.dataset.done) return;
+        row.dataset.done=1; done++;
+        if(k===it.a){ b.classList.add('right'); got++; why.classList.add('ok'); }
+        else { b.classList.add('wrong'); opts.children[it.a].classList.add('right'); why.classList.add('no'); }
+        why.classList.add('show'); [...opts.children].forEach(x=>x.disabled=true);
+        setScore(S.score,got,items.length);
+      };
+      opts.appendChild(b);
+    });
+    body.appendChild(opts); body.appendChild(why); row.appendChild(body); S.body.appendChild(row);
+  });
+  addBtn(S.actions,'↺ Làm lại',()=>{ S.box.remove(); const h=document.getElementById(id); h.innerHTML=''; choiceEx(id,num,title,instr,ref,items); },true);
+}
+
+/* ---------- type B: true/false + fix ---------- */
+function tfEx(id, num, title, instr, ref, items){
+  const conv = items.map(it=>({q:it.s, opts:['✔ Correct','✘ Wrong'], a: it.ok?0:1,
+    why: it.ok ? `Câu đúng. ${it.note||''}` : `Sửa: <span class="fix">${it.fix}</span>${it.note?' — '+it.note:''}`}));
+  choiceEx(id,num,title,instr,ref,conv);
+}
+
+/* ---------- type C: click the real subject, then the verb ---------- */
+function subjEx(id, num, title, instr, ref, items){
+  const S = shell(id,num,title,instr,ref); let got=0;
+  setScore(S.score,0,items.length);
+  items.forEach((it,i)=>{
+    const row = el('div','it'); row.innerHTML = `<span class="n">${i+1}</span>`;
+    const body = el('div','body'); const q = el('div','q');
+    let tries=0;
+    it.words.forEach((w,k)=>{
+      if(w==='___'){ q.appendChild(el('span','blank','&nbsp;')); q.appendChild(document.createTextNode(' ')); return; }
+      const sp = el('span','word',w);
+      sp.onclick=()=>{
+        if(row.dataset.step) return;
+        if(k===it.s){ sp.classList.add('picked'); row.dataset.step=1; step2.style.display='block'; }
+        else { tries++; sp.classList.remove('nope'); void sp.offsetWidth; sp.classList.add('nope'); }
+      };
+      q.appendChild(sp); q.appendChild(document.createTextNode(' '));
+    });
+    body.appendChild(q);
+    const hint = el('span','correct-ans-hint',`→ subject: ${it.words[it.s]} · verb: ${it.opts[it.a]}`); q.appendChild(hint);
+    const step2 = el('div',''); step2.style.display='none';
+    step2.appendChild(el('span','small muted','Đúng rồi! Vậy động từ là: '));
+    const opts = el('span','opts'); const why = el('div','why',it.why);
+    it.opts.forEach((o,k)=>{
+      const b = el('button','opt',o); b.dataset.c=(k===it.a)?'1':'0';
+      b.onclick=()=>{
+        if(row.dataset.done) return; row.dataset.done=1;
+        if(k===it.a){ b.classList.add('right'); if(tries===0) got++; why.classList.add('ok'); }
+        else { b.classList.add('wrong'); opts.children[it.a].classList.add('right'); why.classList.add('no'); }
+        why.classList.add('show'); [...opts.children].forEach(x=>x.disabled=true); setScore(S.score,got,items.length);
+      };
+      opts.appendChild(b);
+    });
+    step2.appendChild(opts); step2.appendChild(why); body.appendChild(step2);
+    row.appendChild(body); S.body.appendChild(row);
+  });
+  addBtn(S.actions,'↺ Làm lại',()=>{ const h=document.getElementById(id); h.innerHTML=''; subjEx(id,num,title,instr,ref,items); },true);
+}
+
+/* ---------- type D: typed gaps ---------- */
+function gapEx(id, num, title, instr, ref, items, hw){
+  const S = shell(id,num,title,instr,ref); const inputs=[];
+  setScore(S.score,0,items.length);
+  items.forEach((it,i)=>{
+    const row = el('div','it'); row.innerHTML=`<span class="n">${i+1}</span>`;
+    const body = el('div','body q');
+    const parts = it.q.split('___');
+    body.appendChild(document.createTextNode(parts[0]));
+    const inp = el('input','gap'); inp.type='text'; inp.autocomplete='off'; inp.spellcheck=false; inp.setAttribute('aria-label','Đáp án câu '+(i+1));
+    inp.addEventListener('keydown',e=>{ if(e.key==='Enter') check(); });
+    body.appendChild(inp);
+    body.appendChild(document.createTextNode(parts[1]||''));
+    body.appendChild(el('span','correct-ans-hint','→ '+it.a[0]));
+    const why = el('div','why', hw ? 'Chưa đúng – xem lại quy tắc và thử lại nhé!' : (it.why? it.why+' ' : '')+`Đáp án: <span class="fix">${it.a.join(' / ')}</span>`);
+    body.appendChild(why);
+    row.appendChild(body); S.body.appendChild(row);
+    inputs.push({inp,it,why});
+  });
+  function check(){
+    let got=0;
+    inputs.forEach(({inp,it,why})=>{
+      if(!inp.value.trim()){ inp.classList.remove('okk','bad'); return; }
+      const ok = matches(inp.value,it.a);
+      inp.classList.toggle('okk',ok); inp.classList.toggle('bad',!ok);
+      why.classList.toggle('show',!ok); why.classList.toggle('no',!ok);
+      if(ok) got++;
+    });
+    setScore(S.score,got,items.length);
+  }
+  addBtn(S.actions,'✓ Kiểm tra',check);
+  if(!hw) addBtn(S.actions,'Hiện đáp án',()=>inputs.forEach(({why})=>{why.classList.add('show');}),true);
+  if(hw) HW.push(()=>{ check(); let got=0; const lines=inputs.map(({inp,it},i)=>{ const ok=inp.value.trim()&&matches(inp.value,it.a); if(ok) got++; return `${i+1}. ${inp.value.trim()||'(bỏ trống)'} ${ok?'✓':'✗'}`; }); return `${num} – ${title} (${got}/${items.length})\n`+lines.join('\n'); });
+  addBtn(S.actions,'↺ Làm lại',()=>{ inputs.forEach(({inp,why})=>{inp.value='';inp.classList.remove('okk','bad');why.classList.remove('show','no');}); setScore(S.score,0,items.length); },true);
+}
+
+/* ---------- type E: dropdowns. markup {{a|b*}} ---------- */
+function selEx(id, num, title, instr, ref, items, hw){
+  const S = shell(id,num,title,instr,ref); const sels=[];
+  items.forEach((it,i)=>{
+    const row = el('div','it'); row.innerHTML = it.num===false?'':`<span class="n">${i+1}</span>`;
+    const body = el('div','body q');
+    const html = it.t.replace(/\{\{(.+?)\}\}/g,(m,inner)=>{
+      const opts = inner.split('|'); const idx = sels.length;
+      const correct = opts.findIndex(o=>o.endsWith('*'));
+      sels.push(correct);
+      return `<select class="sel" data-i="${idx}"><option value="-1">…</option>${opts.map((o,k)=>`<option value="${k}">${o.replace('*','')}</option>`).join('')}</select><span class="correct-ans-hint">${opts[correct].replace('*','')}</span>`;
+    });
+    body.innerHTML = html;
+    if(it.why){ const w=el('div','why',it.why); w.dataset.w=1; body.appendChild(w); }
+    row.appendChild(body); S.body.appendChild(row);
+  });
+  setScore(S.score,0,sels.length);
+  const checkSel = ()=>{
+    let got=0;
+    S.box.querySelectorAll('select.sel').forEach(s=>{
+      const v=+s.value, c=sels[+s.dataset.i];
+      s.classList.remove('okk','bad');
+      if(v===-1) return;
+      if(v===c){ s.classList.add('okk'); got++; } else s.classList.add('bad');
+    });
+    if(!hw) S.box.querySelectorAll('.why[data-w]').forEach(w=>w.classList.add('show'));
+    setScore(S.score,got,sels.length);
+    return got;
+  };
+  addBtn(S.actions,'✓ Kiểm tra',checkSel);
+  if(hw) HW.push(()=>{ const got=checkSel(); const lines=[...S.box.querySelectorAll('select.sel')].map((x,i)=>{ const v=+x.value; return `${i+1}. ${v===-1?'(bỏ trống)':x.options[v+1].text} ${v===sels[+x.dataset.i]?'✓':'✗'}`; }); return `${num} – ${title} (${got}/${sels.length})\n`+lines.join('\n'); });
+  if(!hw) addBtn(S.actions,'Hiện đáp án',()=>{
+    S.box.querySelectorAll('select.sel').forEach(s=>{ s.value=sels[+s.dataset.i]; s.classList.remove('bad'); s.classList.add('okk'); });
+    S.box.querySelectorAll('.why[data-w]').forEach(w=>w.classList.add('show'));
+  },true);
+  addBtn(S.actions,'↺ Làm lại',()=>{ S.box.querySelectorAll('select.sel').forEach(s=>{s.value=-1;s.classList.remove('okk','bad');}); S.box.querySelectorAll('.why[data-w]').forEach(w=>w.classList.remove('show')); setScore(S.score,0,sels.length); },true);
+}
+
+/* ---------- type F: open rewrite + model ---------- */
+function openEx(id, num, title, instr, ref, items, hw){
+  const S = shell(id,num,title,instr,ref); S.score.remove();
+  items.forEach((it,i)=>{
+    const row = el('div','it'); row.innerHTML=`<span class="n">${i+1}</span>`;
+    const body = el('div','body');
+    body.appendChild(el('div','q',it.q));
+    if(it.start) body.appendChild(el('div','small muted','Bắt đầu: <b>'+it.start+'</b>'));
+    const ta = el('textarea','open'); ta.rows=1; ta.placeholder='Viết câu của bạn…'; body.appendChild(ta);
+    const m = el('div','model','✔ '+it.m); body.appendChild(m);
+    if(!hw){ const b = el('button','btn ghost','Xem đáp án mẫu'); b.style.marginTop='6px'; b.style.fontSize='14px'; b.style.padding='4px 12px';
+    b.onclick=()=>m.classList.toggle('show'); body.appendChild(b); }
+    row.appendChild(body); S.body.appendChild(row);
+  });
+  if(!hw) addBtn(S.actions,'Hiện tất cả đáp án mẫu',()=>S.box.querySelectorAll('.model').forEach(m=>m.classList.add('show')),true);
+  else { S.actions.remove(); HW.push(()=>`${num} – ${title}\n`+[...S.box.querySelectorAll('textarea.open')].map((t,i)=>`${i+1}. ${t.value.trim()||'(bỏ trống)'}`).join('\n')); }
+}
+
+/* ---------- writing task ---------- */
+function writingEx(id, num, title, prompt, checks, model){
+  const S = shell(id,num,title,'Viết 80–120 từ. Viết xong, tự kiểm tra theo danh sách bên dưới.','Writing'); S.score.remove();
+  S.body.appendChild(el('div','prompt',prompt));
+  const ta = el('textarea','open'); ta.rows=8; ta.placeholder='If I were the principal of my school, I would…'; S.body.appendChild(ta);
+  const wc = el('div','wc','0 words'); S.body.appendChild(wc);
+  ta.addEventListener('input',()=>{ const n=(ta.value.trim().match(/\S+/g)||[]).length; wc.textContent=n+' words'; wc.style.color = (n>=80&&n<=120)?'var(--ok)':'var(--coral)'; });
+  const ul = el('ul','checklist'); checks.forEach(c=>{ const li=el('li'); li.innerHTML=`<label><input type="checkbox">${c}</label>`; ul.appendChild(li); }); S.body.appendChild(ul);
+  S.body.appendChild(el('div','model','<b>Bài mẫu:</b> '+model));
+  S.actions.remove();
+  HW.push(()=>{ const n=(ta.value.trim().match(/\S+/g)||[]).length; const done=[...ul.querySelectorAll('input')].filter(x=>x.checked).length; return `${num} – ${title} (${n} words, checklist ${done}/${checks.length})\n${ta.value.trim()||'(chưa viết)'}`; });
+}
+
+/* ===================== DATA ===================== */
+tfEx('ex-warm','Warm-up','Spot the mistake – from our essays','Chú ý phần <b>in đậm</b>. Câu nào đúng, câu nào sai?','',[
+  {s:'These are all the great factors televised talent show <b>have gave</b> us.',ok:false,fix:'…the benefits that televised talent <u>shows</u> <u>have given</u> us.',note:'“talent show” số ít mà dùng “have” → sai SVA. Đổi thành số nhiều “shows” + “have”, và sau have là V3 (given).'},
+  {s:'Televised talent shows are <b>one of the popular way</b> to find talent.',ok:false,fix:'one of the most popular <u>ways</u>',note:'one of + danh từ <b>số nhiều</b> (Rule 2).'},
+  {s:'Performing live in front of millions of viewers for many hours <b>tests</b> their technical skills and resilience.',ok:true,note:'Chủ ngữ là cả cụm V-ing “Performing live…” → số ít → tests (Rule 8). Bạn viết rất chuẩn!'},
+  {s:'<b>That programs</b> spreading art <b>helps</b> promoting community interest in the performing arts.',ok:false,fix:'<u>These programmes</u> spread art and <u>help</u> promote community interest in the performing arts.',note:'programs là số nhiều → These (không dùng That) và động từ không thêm -s. Sau help dùng V nguyên mẫu.'},
+  {s:'First of all, <b>participant can express</b> their true potential in front of the audience.',ok:false,fix:'<u>participants</u> can express their true potential',note:'Danh từ đếm được số ít không đứng một mình; “their” cho thấy ý là số nhiều.'},
+  {s:'Establishing talent shows can also <b>brings</b> the audience joy.',ok:false,fix:'can also <u>bring</u>',note:'Sau can / will / could… động từ luôn ở dạng nguyên mẫu, dù chủ ngữ số ít.'},
+  {s:'<b>Those</b> who pass multiple rounds of challenges, <b>they have</b> enough ability to become true artists.',ok:false,fix:'<u>Those</u> who pass multiple rounds of challenges <u>have</u> enough ability…',note:'Chủ ngữ thật là “Those”, phần “who pass…” bỏ qua (Rule 1). Không lặp lại “they”.'},
+  {s:'Without these programmes, many talented individuals <b>might never have</b> the chance to become famous.',ok:true,note:'Câu rất hay! Đây chính là một dạng câu điều kiện = <i>If there were no programmes, many talented people might never have the chance…</i> → mình sẽ học ở Phần 2.'}
+]);
+
+choiceEx('ex-sva1','Ex 1','Choose the correct verb','Chọn động từ đúng. Nhớ hỏi: “Chủ ngữ thật là gì? Số ít hay số nhiều?”','Rules 1–8',[
+  {q:'My brother ___ in Da Nang.',opts:['live','lives'],a:1,why:'my brother = he → V-s.'},
+  {q:'The students in my class ___ very shy.',opts:['is','are'],a:1,why:'Chủ ngữ thật: students (số nhiều). “in my class” bỏ qua.'},
+  {q:'The price of these shoes ___ too high.',opts:['is','are'],a:0,why:'Chủ ngữ thật: the price (Rule 1).'},
+  {q:'One of my best friends ___ to study in Germany.',opts:['want','wants'],a:1,why:'One of + N số nhiều → V số ít (Rule 2).'},
+  {q:'Everybody ___ tired after the test.',opts:['was','were'],a:0,why:'everybody = số ít (Rule 3).'},
+  {q:'The news ___ not very good today.',opts:['is','are'],a:0,why:'news là danh từ không đếm được (Rule 4).'},
+  {q:'Maths ___ my favourite subject.',opts:['is','are'],a:0,why:'Môn học đuôi -s/-ics → số ít (Rule 4).'},
+  {q:'My new jeans ___ too long.',opts:['is','are'],a:1,why:'jeans = đồ vật 2 phần → số nhiều (Rule 5).'},
+  {q:'The police ___ looking for the thief.',opts:['is','are'],a:1,why:'police luôn số nhiều (Rule 5).'},
+  {q:'Two hours ___ too long for a lunch break.',opts:['is','are'],a:0,why:'Khoảng thời gian = 1 khối → số ít (Rule 6).'},
+  {q:'There ___ a lot of homework this week.',opts:['is','are'],a:0,why:'homework không đếm được (Rules 4 + 7).'},
+  {q:'There ___ three new students in our class.',opts:['is','are'],a:1,why:'three new students = số nhiều (Rule 7).'},
+  {q:'Playing sports ___ good for your health.',opts:['is','are'],a:0,why:'V-ing làm chủ ngữ → số ít (Rule 8).'},
+  {q:'Each of the rooms ___ a balcony.',opts:['has','have'],a:0,why:'each (of) → số ít (Rule 3).'},
+  {q:'Both my parents ___ English.',opts:['speak','speaks'],a:0,why:'both = 2 người → số nhiều (Rule 11).'}
+]);
+
+subjEx('ex-sva2','Ex 2','Find the real subject','Bước 1: bấm vào <b>chủ ngữ thật</b> (1 từ). Bước 2: chọn động từ.','Rule 1',[
+  {words:'In big cities, the number of cars ___ increasing every year.'.split(' '),s:4,opts:['is','are'],a:0,why:'the number → số ít. “of cars in big cities” chỉ là phần thêm thông tin.'},
+  {words:'The students who sit at the back ___ often very quiet.'.split(' '),s:1,opts:['is','are'],a:1,why:'students → số nhiều. “who sit at the back” bỏ qua.'},
+  {words:'A box of chocolates ___ on the table.'.split(' '),s:1,opts:['is','are'],a:0,why:'a box → số ít.'},
+  {words:'In my opinion, the books on that shelf ___ boring.'.split(' '),s:4,opts:['is','are'],a:1,why:'books → số nhiều.'},
+  {words:'The advice from my teachers ___ very useful.'.split(' '),s:1,opts:['was','were'],a:0,why:'advice không đếm được → số ít; “teachers” không phải chủ ngữ.'},
+  {words:'The quality of public schools ___ improved a lot.'.split(' '),s:1,opts:['has','have'],a:0,why:'the quality → số ít.'},
+  {words:'Nowadays, young people in my country ___ a lot of time online.'.split(' '),s:2,opts:['spend','spends'],a:0,why:'people → số nhiều. “country” chỉ là phần thêm.'}
+]);
+
+tfEx('ex-sva3','Ex 3','IELTS Writing: correct or wrong?','Những câu này lấy từ kiểu bài Writing Task 2. Câu nào sai, sửa lại.','Rules 1–12',[
+  {s:'Nowadays, many people <b>uses</b> social media every day.',ok:false,fix:'use',note:'people = số nhiều.'},
+  {s:'The number of tourists visiting Vietnam <b>has grown</b> rapidly.',ok:true,note:'the number → số ít.'},
+  {s:'A number of students <b>prefers</b> online classes.',ok:false,fix:'prefer',note:'a number of = many → số nhiều.'},
+  {s:'Living in a big city <b>has</b> many advantages.',ok:true,note:'V-ing làm chủ ngữ → số ít.'},
+  {s:'There <b>is</b> a lot of reasons why young people move to cities.',ok:false,fix:'There are a lot of reasons…',note:'reasons = số nhiều.'},
+  {s:'Each student <b>need</b> a quiet place to study.',ok:false,fix:'needs',note:'each → số ít.'},
+  {s:'Air pollution in big cities <b>are</b> a serious problem.',ok:false,fix:'is',note:'chủ ngữ thật: pollution (không đếm được).'},
+  {s:'The information on this website <b>are</b> not reliable.',ok:false,fix:'is',note:'information không đếm được.'},
+  {s:'Children who spend too much time online often <b>feel</b> lonely.',ok:true,note:'children = số nhiều.'},
+  {s:'Thirty percent of the students <b>was</b> satisfied with the course.',ok:false,fix:'were',note:'% of + students → theo “students”.'},
+  {s:'Fifty dollars <b>are</b> too much for a T-shirt.',ok:false,fix:'is',note:'số tiền = 1 khối → số ít.'},
+  {s:'Everyone in my family <b>enjoy</b> cooking.',ok:false,fix:'enjoys',note:'everyone → số ít; “in my family” bỏ qua.'}
+]);
+
+selEx('ex-sva4','Ex 4','IELTS Task 1 mini-report','Chọn dạng đúng của động từ trong đoạn mô tả biểu đồ (số học sinh học ngoại ngữ tại một trường, 2015 & 2025).','Rules 9–11',[
+  {num:false,t:'The bar chart {{show|shows*}} the number of students who studied three foreign languages at a high school in 2015 and 2025. Overall, English {{was*|were}} the most popular language in both years.'},
+  {num:false,t:'In 2015, the number of English learners {{was*|were}} about 300, while a number of students {{was|were*}} also interested in Korean. By 2025, 40% of the students {{was|were*}} learning Chinese.'},
+  {num:false,t:'The figures for Korean {{show*|shows}} a steady increase. However, neither Chinese nor Korean {{was*|were}} as popular as English. Clearly, learning Asian languages {{is*|are}} becoming more common.',
+   why:'shows (the chart) · was (English) · was (the number) · were (a number of = many) · were (% of the students) · show (figures) · was (neither… nor <b>Korean</b> → gần nhất) · is (V-ing làm chủ ngữ).'}
+]);
+
+choiceEx('ex-c5','Ex 5','Which type is it?','Đây là câu điều kiện loại mấy?','',[
+  {q:'If you mix red and blue, you get purple.',opts:['Zero','First','Second','Third'],a:0,why:'Sự thật luôn đúng.'},
+  {q:'If I see Lan at school, I’ll give her your book.',opts:['Zero','First','Second','Third'],a:1,why:'Tình huống có thể xảy ra (present + will).'},
+  {q:'If I were a bird, I would fly to Paris.',opts:['Zero','First','Second','Third'],a:2,why:'Tưởng tượng – không có thật.'},
+  {q:'If we had left earlier, we wouldn’t have missed the bus.',opts:['Zero','First','Second','Third'],a:3,why:'Quá khứ – chúng tôi đã đi muộn và lỡ xe.'},
+  {q:'If you don’t sleep enough, you feel tired.',opts:['Zero','First','Second','Third'],a:0,why:'Quy luật chung.'},
+  {q:'What would you do if you lost your phone on the bus?',opts:['Zero','First','Second','Third'],a:2,why:'Tưởng tượng, không mong xảy ra (past + would).'},
+  {q:'She might pass the test if she practises every day.',opts:['Zero','First','Second','Third'],a:1,why:'might + V, if + present → loại 1.'},
+  {q:'If he hadn’t eaten so much, he wouldn’t have been sick.',opts:['Zero','First','Second','Third'],a:3,why:'Thực tế: anh ấy đã ăn nhiều và bị ốm.'}
+]);
+
+choiceEx('ex-c6','Ex 6','Real or imagined?','Đọc tình huống, chọn câu phù hợp hơn.','EGIU 38',[
+  {sit:'Bạn chắc chắn sẽ gặp cô giáo vào ngày mai.',opts:['If I see her tomorrow, I’ll ask her about the test.','If I saw her tomorrow, I’d ask her about the test.'],a:0,stack:true,why:'Có thể xảy ra → loại 1.'},
+  {sit:'Bạn không có xe máy (và cũng chưa mua).',opts:['If I have a motorbike, I’ll drive you home.','If I had a motorbike, I’d drive you home.'],a:1,stack:true,why:'Không có thật ở hiện tại → loại 2.'},
+  {sit:'Chiều nay có thể mưa.',opts:['If it rains, we’ll stay inside.','If it rained, we’d stay inside.'],a:0,stack:true,why:'Khả năng thật → loại 1.'},
+  {sit:'Bạn 16 tuổi và tưởng tượng mình là Bộ trưởng Giáo dục.',opts:['If I am the Minister of Education, I will cancel exams.','If I were the Minister of Education, I would cancel exams.'],a:1,stack:true,why:'Tưởng tượng → loại 2, dùng “were”.'},
+  {sit:'Bạn của bạn bị đau đầu và xin lời khuyên.',opts:['If I were you, I’d take a break.','If I am you, I’ll take a break.'],a:0,stack:true,why:'Lời khuyên: If I were you, I’d…'},
+  {sit:'Hôm qua bạn quên mang ô và bị ướt.',opts:['If I’d brought my umbrella, I wouldn’t have got wet.','If I brought my umbrella, I wouldn’t get wet.'],a:0,stack:true,why:'Chuyện đã xảy ra trong quá khứ → loại 3.'}
+]);
+
+gapEx('ex-c7','Ex 7','Put the verb in the correct form','Gõ dạng đúng của động từ trong ngoặc, rồi bấm <b>Kiểm tra</b> (hoặc Enter). Viết tắt (’ll, won’t, ’d…) đều được chấp nhận.','EGIU 25, 38–40, 115',[
+  {q:'If you ___ (heat) ice, it melts.',a:['heat']},
+  {q:'If it ___ (rain) tomorrow, we’ll cancel the picnic.',a:['rains'],why:'Không dùng will trong mệnh đề if.'},
+  {q:'I ___ (call) you if I hear any news.',a:['will call']},
+  {q:'If I ___ (be) you, I would practise speaking every day.',a:['were','was'],why:'Nên dùng “were”.'},
+  {q:'If she had more free time, she ___ (learn) to play the guitar.',a:['would learn','could learn','might learn']},
+  {q:'We ___ (not / go) out if the weather is bad.',a:['will not go']},
+  {q:'If I ___ (know) the answer, I would tell you.',a:['knew']},
+  {q:'What ___ (you / do) if you won a million dollars?',a:['would you do']},
+  {q:'If they ___ (leave) earlier, they wouldn’t have missed the train.',a:['had left']},
+  {q:'If you had told me, I ___ (help) you.',a:['would have helped','could have helped']},
+  {q:'If I ___ (not / oversleep) this morning, I wouldn’t have been late.',a:['had not overslept']},
+  {q:'You won’t pass the exam unless you ___ (study) harder.',a:['study'],why:'unless đã mang nghĩa phủ định.'},
+  {q:'If people ___ (not / recycle), the environment will suffer.',a:['do not recycle']},
+  {q:'Students would feel less stressed if schools ___ (give) less homework.',a:['gave']}
+]);
+
+openEx('ex-c8','Ex 8','Regrets: make a third conditional','Viết lại thành câu điều kiện loại 3 (If + had V3, would have V3).','EGIU 40',[
+  {q:'I didn’t study, so I failed the test.',start:'If I…',m:'If I had studied, I wouldn’t have failed the test.'},
+  {q:'It rained, so we didn’t play football.',start:'If it…',m:'If it hadn’t rained, we would have played football.'},
+  {q:'Minh didn’t set an alarm, so he woke up late.',start:'If Minh…',m:'If Minh had set an alarm, he wouldn’t have woken up late.'},
+  {q:'She ate too much ice cream and felt sick.',start:'If she…',m:'If she hadn’t eaten so much ice cream, she wouldn’t have felt sick.'},
+  {q:'We took a taxi, so we arrived on time.',start:'If we…',m:'If we hadn’t taken a taxi, we wouldn’t have arrived on time.'}
+]);
+
+openEx('ex-c9','Ex 9','Rewrite with unless','Viết lại câu dùng <b>unless</b>. Nhớ: unless = if … not.','EGIU 115',[
+  {q:'If you don’t hurry, you’ll miss the bus.',start:'Unless…',m:'Unless you hurry, you’ll miss the bus.'},
+  {q:'I won’t go to the party if Nam doesn’t go.',start:'I won’t go…',m:'I won’t go to the party unless Nam goes.'},
+  {q:'If it doesn’t rain, we’ll go to the beach.',start:'Unless…',m:'Unless it rains, we’ll go to the beach.'},
+  {q:'You can’t enter the exam room if you don’t have your ID card.',start:'You can’t…',m:'You can’t enter the exam room unless you have your ID card.'}
+]);
+
+selEx('ex-c10','Ex 10','Combo for IELTS Writing: SVA + Conditionals','Mỗi câu có 2 chỗ trống: một chỗ kiểm tra <b>SVA</b>, một chỗ kiểm tra <b>câu điều kiện</b>.','Task 2',[
+  {t:'If the number of cars {{continues*|continue}} to rise, air pollution {{will get*|would have got}} worse.'},
+  {t:'If every student {{had*|have}} a laptop, online learning {{would be*|will have been}} much easier.'},
+  {t:'Unless people {{changes|change*}} their habits, plastic waste {{will increase*|would have increased}}.'},
+  {t:'If the government {{invested*|will invest}} more in public transport, fewer people {{would drive*|will have driven}} to work.'},
+  {t:'If young people {{spends|spend*}} too much time online, they often {{feel*|would have felt}} lonely.'},
+  {t:'If one of my classmates {{needs*|need}} help, I {{will help*|would have helped}} them.',
+   why:'continues / will get (1st) · had / would be (2nd) · change / will increase (unless) · invested / would drive (2nd) · spend / feel (zero) · needs / will help (1st).'}
+]);
+
+/* ===================== HOMEWORK DATA ===================== */
+selEx('hw1','HW 1','Proofread: My hometown','Chọn động từ đúng trong đoạn văn.','SVA',[
+  {num:false,t:'My hometown {{is*|are}} a small city in the north of Vietnam. The people there {{is|are*}} very friendly, and everyone {{know|knows*}} each other. One of the best things about my city {{is*|are}} the food. There {{is|are*}} many small restaurants near the market.'},
+  {num:false,t:'However, the traffic in the city centre {{is*|are}} getting worse, and the number of motorbikes {{has*|have}} increased a lot. A number of my friends {{want*|wants}} to move to Hanoi because the salaries there {{is|are*}} higher. In my opinion, living in a small city {{has*|have}} more advantages than disadvantages.'}
+], true);
+
+gapEx('hw2','HW 2','Subject–verb agreement','Viết dạng đúng của động từ ở thì <b>hiện tại đơn</b>.','SVA',[
+  {q:'Neither of my sisters ___ (like) spicy food.',a:['likes']},
+  {q:'The information in these books ___ (be) out of date.',a:['is']},
+  {q:'Each of the students ___ (have) to give a presentation.',a:['has']},
+  {q:'Economics ___ (be) a difficult subject for many students.',a:['is']},
+  {q:'My glasses ___ (be) on the table.',a:['are']},
+  {q:'Twenty minutes ___ (be) enough for a short break.',a:['is']},
+  {q:'The teacher, together with her students, ___ (be) going on a school trip.',a:['is']},
+  {q:'Most of the students in my class ___ (want) to study abroad.',a:['want']},
+  {q:'Watching too many videos ___ (make) me tired.',a:['makes']},
+  {q:'A number of shops in my area ___ (close) at 9 p.m.',a:['close']}
+], true);
+
+gapEx('hw3','HW 3','Conditionals: 0, 1, 2, 3','Viết dạng đúng của động từ trong ngoặc.','Conditionals',[
+  {q:'If you ___ (not / water) plants, they die.',a:['do not water']},
+  {q:'If Lan ___ (finish) her homework early, she’ll watch a film.',a:['finishes']},
+  {q:'If I ___ (have) a car, I would drive to school.',a:['had']},
+  {q:'I ___ (buy) you a present if I had known it was your birthday.',a:['would have bought']},
+  {q:'We’ll miss the train unless we ___ (leave) now.',a:['leave']},
+  {q:'If I were you, I ___ (not / stay) up so late.',a:['would not stay']},
+  {q:'If he ___ (listen) to the teacher, he wouldn’t have made that mistake.',a:['had listened']},
+  {q:'What ___ (happen) if everyone stopped using cars?',a:['would happen']},
+  {q:'If the weather ___ (be) nice tomorrow, we’ll go hiking.',a:['is']},
+  {q:'She ___ (pass) the exam if she had studied harder.',a:['would have passed','could have passed','might have passed']},
+  {q:'If this phone ___ (not / be) so expensive, I would buy it.',a:['were not','was not']},
+  {q:'If I ___ (know) about the party, I would have come.',a:['had known']}
+], true);
+
+openEx('hw4','HW 4','Rewrite the sentences','Viết lại câu với nghĩa không đổi, bắt đầu bằng từ cho sẵn.','Conditionals',[
+  {q:'I don’t have enough money, so I can’t buy a new laptop.',start:'If I…',m:'If I had enough money, I could / would buy a new laptop.'},
+  {q:'She didn’t take an umbrella, so she got wet.',start:'If she…',m:'If she had taken an umbrella, she wouldn’t have got wet.'},
+  {q:'If you don’t practise, you won’t improve.',start:'Unless…',m:'Unless you practise, you won’t improve.'},
+  {q:'Minh lives far from school, so he is often late.',start:'If Minh…',m:'If Minh didn’t live so far from school, he wouldn’t be late so often.'},
+  {q:'Take a break, or you will feel tired.',start:'If you…',m:'If you don’t take a break, you will feel tired.'},
+  {q:'The bus was late, so I missed the start of the class.',start:'If the bus…',m:'If the bus hadn’t been late, I wouldn’t have missed the start of the class.'}
+], true);
+
+writingEx('hw5','HW 5','Mini writing','What would you change if you were the principal of your school?',[
+  'Có ít nhất <b>3 câu điều kiện loại 2</b> (If + past, would + V)',
+  'Có ít nhất <b>1 câu điều kiện loại 1</b>',
+  'Không có <i>will / would</i> trong mệnh đề if',
+  'Đã kiểm tra lại <b>mọi động từ</b> theo 12 quy tắc SVA (đặc biệt: every, one of, people, information…)',
+  'Dùng dấu phẩy khi <i>If</i> đứng đầu câu'
+],'If I were the principal of my school, I would make three changes. First, I would start classes at 8 a.m. instead of 7 a.m. If students had more sleep, they would concentrate better in class. Second, I would build a bigger library, because every student needs a quiet place to study. Finally, I would give less homework at weekends. If students didn’t have so much homework, they could spend more time with their families. In my opinion, these changes would make students happier. If the school listens to its students, everyone will benefit.');
+
+$('#copyHW').onclick=async()=>{
+  const name=$('#stName').value.trim()||'(chưa ghi tên)';
+  const text=`HOMEWORK – Subject–Verb Agreement & Conditionals\nTên: ${name}\n\n`+HW.map(f=>f()).join('\n\n');
+  const out=$('#hwOut'), msg=$('#copyMsg');
+  out.value=text; out.style.display='block';
+  try{ await navigator.clipboard.writeText(text); msg.textContent='✓ Đã copy! Dán vào tin nhắn gửi cô nhé.'; msg.style.color='var(--ok)'; }
+  catch(e){ out.focus(); out.select(); msg.textContent='Không copy tự động được – hãy bôi đen phần bên dưới và copy (Ctrl/Cmd + C).'; msg.style.color='var(--coral)'; }
+};
+
+/* ===================== Teacher mode ===================== */
+const tm = $('#tmode');
+try{ if(localStorage.getItem('gl-teacher')==='1'){ tm.checked=true; document.body.classList.add('teacher'); } }catch(e){}
+tm.addEventListener('change',()=>{ document.body.classList.toggle('teacher',tm.checked); try{ localStorage.setItem('gl-teacher',tm.checked?'1':'0'); }catch(e){} });
+
+/* ===================== Speaking tools ===================== */
+let pool=[], all=[];
+const namesInp=$('#names'), chips=$('#nameChips'), pickName=$('#pickName');
+try{ const saved=localStorage.getItem('gl-names'); if(saved) namesInp.value=saved; }catch(e){}
+function loadNames(){
+  all = namesInp.value.split(',').map(s=>s.trim()).filter(Boolean);
+  pool = [...all]; renderChips([]);
+  try{ localStorage.setItem('gl-names',namesInp.value); }catch(e){}
+}
+function renderChips(done){
+  chips.innerHTML = all.map(n=>`<span class="chip${done.includes(n)?' done':''}">${n}</span>`).join('');
+}
+let doneList=[];
+$('#pickBtn').onclick=()=>{
+  if(!all.length || namesInp.value.split(',').map(s=>s.trim()).filter(Boolean).join()!==all.join()){ loadNames(); doneList=[]; }
+  if(!all.length){ pickName.textContent='Nhập tên trước nhé ✍️'; return; }
+  if(!pool.length){ pool=[...all]; doneList=[]; }
+  let n=0; const final = pool.splice(Math.floor(Math.random()*pool.length),1)[0];
+  const spin = setInterval(()=>{ pickName.textContent = all[Math.floor(Math.random()*all.length)]; if(++n>12){ clearInterval(spin); pickName.textContent='🎤 '+final; doneList.push(final); renderChips(doneList);} },70);
+};
+$('#resetNames').onclick=()=>{ loadNames(); doneList=[]; pickName.textContent='—'; };
+if(namesInp.value) { all = namesInp.value.split(',').map(s=>s.trim()).filter(Boolean); pool=[...all]; renderChips([]); }
+
+const Q = {
+  '1':{label:'1st conditional',starter:'If …, I will / I’ll …',list:[
+    'What will you do if it’s sunny this weekend?','If you have free time tonight, what will you do?','If you get band 6.0 in IELTS, how will you celebrate?','What will you do if your teacher gives you no homework this week?','If your best friend visits you tomorrow, where will you take them?','What will happen if you don’t sleep enough tonight?']},
+  '2':{label:'2nd conditional',starter:'If I could / were / had …, I would …',list:[
+    'If you could live in any country, where would you live? Why?','What would you do if you were invisible for a day?','If you were the principal of your school, what would you change?','If you could meet any famous person, who would it be?','If you won one billion VND, what would you buy?','If you could have any superpower, what would it be?','If you didn’t have to go to school, what would you do every day?','If you could speak any language perfectly, which would you choose?']},
+  '3':{label:'3rd conditional',starter:'If I had …, I would have …',list:[
+    'If you hadn’t joined this IELTS class, what would you have done this year?','Think of a mistake you made last week. What would have happened if you hadn’t made it?','If you had been born in another country, how would your life have been different?','What would you have done last weekend if it had rained all day?','If you had known about IELTS earlier, would you have started sooner?']},
+  'p3':{label:'IELTS Speaking Part 3',starter:'I think if … , … would … because …',list:[
+    'What would happen if people stopped using plastic bags?','If students had no homework, would they learn better? Why / why not?','What would happen if everyone worked from home?','If the government made public transport free, would people drive less?','What would change if children couldn’t use smartphones until 16?','If cities had more parks, would people be healthier?']}
+};
+const used={};
+document.querySelectorAll('[data-q]').forEach(b=>b.onclick=()=>{
+  const k=b.dataset.q, set=Q[k]; used[k]=used[k]||[];
+  if(used[k].length===set.list.length) used[k]=[];
+  let i; do{ i=Math.floor(Math.random()*set.list.length); }while(used[k].includes(i));
+  used[k].push(i);
+  $('#qType').textContent=set.label; $('#qText').textContent=set.list[i]; $('#qStarter').textContent='💡 '+set.starter;
+});
+let tInt=null;
+$('#timerBtn').onclick=()=>{
+  clearInterval(tInt); let t=30; const d=$('#timer');
+  const show=()=>{ d.textContent='0:'+String(t).padStart(2,'0'); };
+  show(); tInt=setInterval(()=>{ t--; show(); if(t<=0){ clearInterval(tInt); d.textContent='Go! 🎤'; } },1000);
+};
+</script>
+</body>
+</html>
